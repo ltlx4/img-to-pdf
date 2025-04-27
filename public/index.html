@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.16.0/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Compressonator/1.0.5/compressor.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Image to PDF Converter</h1>
+        <div class="upload-area" id="dropArea">
+            <input type="file" id="fileInput" accept="image/*" multiple>
+            <p>Drag & drop images here or click to browse</p>
+            <div id="preview"></div>
+        </div>
+        
+        <div class="options">
+            <label>
+                <input type="checkbox" id="mergeCheckbox" checked>
+                Merge all images into a single PDF
+            </label>
+            <label>
+                <input type="checkbox" id="compressCheckbox" checked>
+                Compress PDF to reduce size
+            </label>
+            <button id="convertBtn" disabled>Convert to PDF</button>
+            <p class="hint">Drag images to reorder them before conversion</p>
+        </div>
+        
+        <div id="status"></div>
+    </div>
+    
+    <script src="../src/pdf-utils.js"></script>
+    <script src="../src/script.js"></script>
+</body>
+</html>
